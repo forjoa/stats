@@ -1,0 +1,111 @@
+:root{
+    --main-background: #090b1a;
+    --card-nackground: #1b1938;
+    --violet: #aa5cdb;
+    --white: #fff;
+    --transparent-white: hsla(0, 0%, 100%, 0.60);
+    --inter:  'Inter', sans-serif;
+    --lexend: 'Lexend Deca', sans-serif;
+}
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    background-color: var(--main-background);
+    display: grid;
+    place-items: center;
+}
+
+.general{
+    background-color: var(--card-nackground);
+    width: 75%;
+    height: 446px;
+    display: flex;
+    gap: 30px;
+    border-radius: 20px;
+}
+
+h1,
+h2{
+    font-family: var(--inter);
+    color: var(--white);
+}
+
+#v{
+    color: var(--violet);
+}
+
+.img img{
+    height: 100%;
+    filter: invert(0.4) sepia(1) hue-rotate(210deg) saturate(200%);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.texto,
+.img{
+    width: 50%;
+}
+
+.texto{
+    padding: 60px;
+}
+
+.paragraph p{
+    color: var(--transparent-white);
+    font-family: var(--inter);
+    font-size: 15px;
+}
+
+.stats{
+    display: flex;
+    gap: 7%;
+    margin-top: 55px;
+}
+
+.stats p{
+    color: var(--transparent-white);
+    font-family: var(--inter);
+}
+
+.uno,
+.dos,
+.tres{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.uno h2,
+.dos h2,
+.tres h2{
+    margin: 0;
+}
+
+.uno p,
+.dos p,
+.tres p{
+    margin: 0;
+    font-size: 15px;
+}
+
+@media (max-width: 1110px) {
+    .general{
+        flex-direction: column-reverse;
+        width: 540px;
+        height: auto;
+        gap: 0;
+    }
+    .texto{
+        width: 80%;
+    }
+
+    .img img{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 0;
+    }
+}
+
